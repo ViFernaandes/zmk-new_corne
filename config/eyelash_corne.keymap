@@ -103,6 +103,22 @@
             bindings = <&kp O>, <&m_o_til>;
         };
 
+        td_barra: td_barra {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Barra ou Interrogacao";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp INT1>, <&kp LS(INT1)>;  // ABNT2: tecla / e Shift+/ = ?
+        };
+
+        bspc_del: bspc_del {
+            compatible = "zmk,behavior-mod-morph";
+            display-name = "Backspace ou Delete";
+            #binding-cells = <0>;
+            bindings = <&kp BSPC>, <&kp DEL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         rsr_vol: rsr_vol {
             compatible = "zmk,behavior-runtime-sensor-rotate";
             #sensor-binding-cells = <0>;
@@ -133,9 +149,9 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB         &kp Q  &kp W  &td_e     &kp R         &kp T                             &kp UP                &kp Y      &td_u  &kp I      &td_o    &kp P     &kp BSPC
+&kp TAB         &kp Q  &kp W  &td_e     &kp R         &kp T                             &kp UP                &kp Y      &td_u  &kp I      &td_o    &kp P     &bspc_del
 &td_shift_caps  &td_a  &kp S  &kp D     &kp F         &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL       &kp Z  &kp X  &td_c     &kp V         &kp B      &kp SPACE              &kp DOWN              &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+&kp LCTRL       &kp Z  &kp X  &td_c     &kp V         &kp B      &kp SPACE              &kp DOWN              &kp N      &kp M  &kp COMMA  &kp DOT  &td_barra &kp ESC
                               &kp LGUI  &kp LEFT_ALT  &lt 1 SPACE                                             &lt 3 ENTER  &mo 2  &kp RALT
             >;
 
