@@ -108,7 +108,7 @@
             display-name = "Barra ou Interrogacao";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp INT1>, <&kp LS(INT1)>;  // ABNT2: tecla / e Shift+/ = ?
+            bindings = <&kp KP_DIVIDE>, <&kp RA(W)>;  // / do numpad (qualquer layout) e AltGr+W = ? no ABNT/ABNT2
         };
 
         bspc_del: bspc_del {
