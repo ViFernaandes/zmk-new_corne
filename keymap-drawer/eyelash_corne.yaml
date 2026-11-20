@@ -13,7 +13,7 @@ layers:
   - I
   - '&td_o'
   - P
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
   - '&td_shift_caps'
   - '&td_a'
   - S
@@ -41,7 +41,7 @@ layers:
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
-  - {t: /, s: '?'}
+  - '&td_barra'
   - $$mdi:keyboard-esc$$
   - LGUI
   - $$mdi:apple-keyboard-option$$
